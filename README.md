@@ -1,1 +1,0 @@
-# argocd-rootapp-example-install
