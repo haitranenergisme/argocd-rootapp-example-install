@@ -14,7 +14,7 @@ spec:
       valueFiles:
         - values.yaml
   destination:
-    namespace: datawrangling
+    namespace: datawrangling2
     name: kubernetes-devops-aks-2-admin
   syncPolicy:
     automated:
