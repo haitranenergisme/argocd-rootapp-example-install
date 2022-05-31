@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels: {}
+  name: studiodw-dev
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/haitranenergisme/datawrangling-studio.git'
+    #    repoURL: 'http://git.devops.energisme.com/analytics/paas/data_wrangler/studio_dw.git'
+    path: charts
+    targetRevision: develop
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    namespace: datawrangling
+    name: kubernetes-devops-aks-2-admin
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
