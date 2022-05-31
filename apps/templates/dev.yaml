@@ -16,7 +16,8 @@ spec:
   destination:
     namespace: datawrangling2
     #name: kubernetes-devops-aks-2-admin
-    name: htranlab-aks
+    #name: htranlab-aks
+    server: https://kubernetes.default.svc
   syncPolicy:
     automated:
       prune: true
