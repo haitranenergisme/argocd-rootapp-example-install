@@ -15,7 +15,8 @@ spec:
         - values.yaml
   destination:
     namespace: datawrangling2
-    name: kubernetes-devops-aks-2-admin
+    #name: kubernetes-devops-aks-2-admin
+    name: htranlab-aks
   syncPolicy:
     automated:
       prune: true
